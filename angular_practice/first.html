@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src = 'bower_components/angular/angular.js'></script>
+  <script>
+    var app = angular.module('app', []);
+    app.controller('divController', ['$scope', function($scope){
+      $scope.myName = 'Abbey';
+      $scope.myFavoriteLanguage = 'MEAN';
+      $scope.myFavoriteJSLibrary = 'Angular';
+      $scope.printController = function(){
+        console.log($scope);
+      }
+    }]);
+  </script>
+</head>
+<body>
+  <div ng-controller = "divController" id="divController">
+    <h1>{{ myName }}</h1>
+    <h1>{{ myFavoriteLanguage }}</h1>
+    <h1>{{ myFavoriteJSLibrary }}</h1>
+  </div>
+
+</body>
+</html>

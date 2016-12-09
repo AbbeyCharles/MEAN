@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Dogs go here!</h1>
+  <% for (dog in dogs) { %>
+    <a href="/edit/<%= dogs[dog]._id %>"><%= dogs[dog].name %></a>
+    <%= dogs[dog].age %>
+    <%= dogs[dog].comment %>
+    <form action="/delete/<%= dogs[dog]._id %>/" method="post">
+      <input type="submit" value="Delete">
+    </form>
+    <hr>
+  <% } %>
+  <button><a href="/new">Add a New </a></button>
+</body>
+</html>

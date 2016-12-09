@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <% for (dog in dogs) { %>
+      <h1>Show!</h1>
+      <h3>Name: <%= dogs[dog].name %></h3>
+      <h3>Weight: <%= dogs[dog].weight %></h3>
+      <h4>Color: <%= dogs[dog].color %></h4>
+      <button><a href="/">Home</a></button>
+      <button><a href="/edit/<%= dogs[dog]._id %>">Edit</a></button>
+    <% } %>
+  </div>
+</body>
+</html>
